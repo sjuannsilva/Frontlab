@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="FrontLab — projeto front-end responsivo, acessível e preparado para produção." />
+    <title>FrontLab | Projeto Front-end</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="logo" href="#inicio" aria-label="FrontLab - início">Front<span>Lab</span></a>
+
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Abrir menu de navegação"
+          aria-expanded="false"
+          aria-controls="menu-principal"
+        >
+          <span></span><span></span><span></span>
+        </button>
+
+        <nav id="menu-principal" class="main-nav" aria-label="Navegação principal">
+          <a href="#sobre">Sobre</a>
+          <a href="#recursos">Recursos</a>
+          <a href="#acessibilidade">Acessibilidade</a>
+          <a href="#contato">Contato</a>
+          <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Ativar modo escuro">
+            <span aria-hidden="true">◐</span> Tema
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main id="conteudo">
+      <section id="inicio" class="hero" aria-labelledby="titulo-principal">
+        <div class="container hero-grid">
+          <div class="hero-content">
+            <p class="eyebrow">Projeto Front-end • Vite • Acessibilidade</p>
+            <h1 id="titulo-principal">Uma experiência web simples, rápida e acessível.</h1>
+            <p class="hero-text">
+              Projeto demonstrativo desenvolvido com HTML semântico, CSS responsivo e JavaScript,
+              preparado para versionamento, build de produção e deploy.
+            </p>
+            <div class="hero-actions">
+              <a class="button primary" href="#recursos">Conhecer recursos</a>
+              <a class="button secondary" href="#contato">Entrar em contato</a>
+            </div>
+          </div>
+
+          <aside class="hero-card" aria-label="Resumo do projeto">
+            <div class="status-dot" aria-hidden="true"></div>
+            <p class="card-label">STATUS DO PROJETO</p>
+            <h2>Pronto para produção</h2>
+            <ul>
+              <li>HTML5 semântico</li>
+              <li>WCAG 2.1 como referência</li>
+              <li>Layout responsivo</li>
+              <li>Build com Vite</li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <section id="sobre" class="section" aria-labelledby="titulo-sobre">
+        <div class="container narrow">
+          <p class="eyebrow">Sobre</p>
+          <h2 id="titulo-sobre">Desenvolvimento pensado para pessoas</h2>
+          <p>
+            O FrontLab reúne boas práticas de desenvolvimento front-end em uma interface objetiva.
+            A estrutura prioriza conteúdo claro, navegação previsível, foco visível e adaptação a
+            diferentes tamanhos de tela.
+          </p>
+        </div>
+      </section>
+
+      <section id="recursos" class="section section-alt" aria-labelledby="titulo-recursos">
+        <div class="container">
+          <p class="eyebrow">Recursos</p>
+          <h2 id="titulo-recursos">Práticas aplicadas</h2>
+          <div class="cards">
+            <article class="feature-card">
+              <div class="icon" aria-hidden="true">01</div>
+              <h3>Semântica</h3>
+              <p>Uso de header, nav, main, section, article e footer para organizar o conteúdo.</p>
+            </article>
+            <article class="feature-card">
+              <div class="icon" aria-hidden="true">02</div>
+              <h3>Acessibilidade</h3>
+              <p>Foco visível, skip link, rótulos, estados ARIA e navegação completa pelo teclado.</p>
+            </article>
+            <article class="feature-card">
+              <div class="icon" aria-hidden="true">03</div>
+              <h3>Performance</h3>
+              <p>Vite gera uma build otimizada e minificada para o ambiente de produção.</p>
+            </article>
+            <article class="feature-card">
+              <div class="icon" aria-hidden="true">04</div>
+              <h3>Responsividade</h3>
+              <p>Layout adaptável para celulares, tablets e computadores sem depender de largura fixa.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="acessibilidade" class="section" aria-labelledby="titulo-acessibilidade">
+        <div class="container accessibility-grid">
+          <div>
+            <p class="eyebrow">Acessibilidade</p>
+            <h2 id="titulo-acessibilidade">Navegação inclusiva desde a estrutura</h2>
+            <p>
+              Elementos interativos utilizam HTML nativo sempre que possível. O menu informa seu
+              estado com <code>aria-expanded</code>, o botão de tema possui nome acessível e o
+              conteúdo pode ser alcançado pelo teclado sem depender do mouse.
+            </p>
+          </div>
+          <div class="check-list" aria-label="Verificações de acessibilidade">
+            <div>✓ Contraste de texto e fundo revisado</div>
+            <div>✓ Ordem de foco lógica</div>
+            <div>✓ Indicador de foco visível</div>
+            <div>✓ Áreas de navegação identificadas</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contato" class="section section-alt" aria-labelledby="titulo-contato">
+        <div class="container narrow">
+          <p class="eyebrow">Contato</p>
+          <h2 id="titulo-contato">Envie uma mensagem</h2>
+          <form id="contact-form" novalidate>
+            <div class="form-group">
+              <label for="nome">Nome</label>
+              <input id="nome" name="nome" type="text" autocomplete="name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">E-mail</label>
+              <input id="email" name="email" type="email" autocomplete="email" required />
+            </div>
+            <div class="form-group">
+              <label for="mensagem">Mensagem</label>
+              <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+            </div>
+            <button class="button primary" type="submit">Enviar mensagem</button>
+            <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© 2026 FrontLab. Projeto acadêmico de desenvolvimento front-end.</p>
+        <a href="#inicio">Voltar ao início</a>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
