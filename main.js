@@ -1,4 +1,4 @@
-import "./style.css";
+import './estilo.css';
 
 const root = document.documentElement;
 const menuToggle = document.querySelector(".menu-toggle");
